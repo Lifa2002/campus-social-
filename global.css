@@ -1,0 +1,184 @@
+:root {
+  --primary-blue: #003087;
+  --primary-blue-hover: #002266;
+  --neutral-white: #FFFFFF;
+  --neutral-light: #F5F5F5;
+  --neutral-mid: #555555;
+  --neutral-dark: #222222;
+  --error-red: #d9534f;
+  --border-color: #dddddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--neutral-light);
+  color: var(--neutral-dark);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.content-area {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-view {
+  animation: fadeInView 0.4s ease-in-out;
+}
+
+@keyframes fadeInView {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.new-post-animated {
+  animation: slideInPost 0.4s ease-out;
+}
+
+@keyframes slideInPost {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, opacity 0.15s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input, select, textarea {
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 6px rgba(0, 48, 135, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--neutral-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e6f0ff;
+  color: var(--primary-blue);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin: 3px;
+  border: 1px solid #b8d5ff;
+}
+
+.error-text {
+  color: var(--error-red);
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* --- Media Upload & Gallery Styles --- */
+
+.file-upload-btn {
+  background-color: var(--neutral-light);
+  color: var(--primary-blue);
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.88rem;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.file-upload-btn:hover {
+  background-color: #e8ecef;
+}
+
+/* Video Player Enhancements */
+video {
+  outline: none;
+  background-color: #000000;
+  border-radius: 6px;
+}
+
+/* Delete badge on preview thumbnails */
+.preview-remove-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--neutral-white);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.preview-remove-btn:hover {
+  background-color: var(--error-red) !important;
+}
+
+/* --- Scrollbar Customization for Comments --- */
+
+.comment-scroll-container {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.comment-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comment-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  main.content-area {
+    padding: 15px;
+  }
+}

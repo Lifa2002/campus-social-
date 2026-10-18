@@ -1,34 +1,108 @@
-# 🎓 Richfield Connect — Academic Social Engagement System
+\# Richfield Connect - Student Social Platform
 
-A modern, responsive React single-page web application designed for student social engagement and academic communication. Built using React, React Router, and Context API, it features simulated user registration, live community posting with media attachments (images/videos), commenting, likes, post editing, and persistent client-side data handling via browser Local Storage.
 
-🔗 **Live Demo:** [View Live on Netlify](YOUR_NETLIFY_LINK_HERE)
 
----
+Richfield Connect is a responsive, single-page React web application designed for students to interact, share posts, and manage their profiles. Built with React, React Router, and the React Context API with Local Storage persistence.
 
-## ✨ Key Features
 
-- **React Router Architecture:** Seamless client-side multi-view routing across Home, About, Sign Up, Feed, and Profile views without page reloads.
-- **Global State Management:** Powered by React’s `Context API` and `useReducer` pattern to handle user sessions and community posts globally.
-- **Interactive Community Feed:** Users can create posts, attach multiple media files (photos/videos), like posts, reshare, leave comments, and edit existing posts inline.
-- **Client-Side Data Persistence:** Automatically syncs user data and feed posts with the browser's **Local Storage** so your session and posts remain intact across refreshes.
-- **Responsive UI Components:** Clean, modular component architecture (`Navbar`, `Footer`, `CreatePost`, `Post`, `ProfilePreview`) styled for optimal user experience.
 
----
+\---
 
-## 🛠️ Tech Stack
 
-- **Library:** React 18 (Functional Components, Hooks, Context API)
-- **Routing:** React Router DOM (v6)
-- **Styling:** CSS3, Modular Styles, Responsive Design
-- **State & Storage:** React Reducer + Browser Local Storage
-- **Build Tool:** Vite
-- **Deployment:** Netlify / GitHub
 
----
+\##  Student Details
 
-## 🚀 How to Run Locally
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/LifaHlatshwayo/richfield-connect.git](https://github.com/LifaHlatshwayo/richfield-connect.git)
+
+Student Name:
+
+Student ITS Number:
+
+Qualification:
+
+Module: Web Development (React.js)
+
+
+
+\---
+
+
+
+\##  Features \& Components Structure
+
+
+
+The application consists of 5 main views and modular components structured as follows:
+
+
+
+\### \*\*Views (`/src/views`)\*\*
+
+\* \*\*Home (`/`):\*\* Hero section welcoming students with quick nav links.
+
+\* \*\*About (`/about`):\*\* Overview of the Richfield Connect platform mission and features.
+
+\* \*\*SignUp (`/signup`):\*\* Interactive user registration form with live state validation.
+
+\* \*\*Profile (`/profile`):\*\* User profile page with editable information.
+
+\* \*\*Feed (`/feed`):\*\* Main community feed where students can view and publish posts.
+
+
+
+\### \*\*Components (`/src/components`)\*\*
+
+\* `Navbar`: Navigation bar present across all views.
+
+\* `Footer`: Responsive page footer with links and institutional branding.
+
+\* `CreatePost`: Form allowing users to submit new posts to the feed.
+
+\* `Post`: Individual post cards displaying user, content, and timestamp.
+
+\* `ProfilePreview`: Lightweight preview card displaying user profile metrics.
+
+
+
+\### \*\*State Management \& Persistence (`/src/context`)\*\*
+
+\* `AppContext.jsx`: React Context API implementation managing global state for registered users, active sessions, and post feeds. Includes automatic sync with `localStorage`.
+
+
+
+\---
+
+
+
+\##  Prerequisites \& Installation
+
+
+
+Ensure you have \*\*Node.js\*\* (v18 or higher) installed on your machine.
+
+
+
+\### \*\*1. Clone or Extract Project\*\*
+
+Unzip the `connect.zip` archive to your local working directory.Like VsCode 
+
+
+
+\### \*\*2. Install Dependencies\*\*
+
+Open your terminal in the project root folder and run:
+
+
+
+```bash
+
+npm install
+
+
+
+
+
+Once started, open your browser and navigate to the provided local URL
+
+
+
